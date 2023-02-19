@@ -132,7 +132,11 @@ border: 3px solid#000000;
         <h1>Write code in the grey space below. Copy the resulting text into the IDE!</h1>
     </div>
   <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
-  
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
 
 </body>
 
@@ -185,7 +189,39 @@ background(240);
 
 download.addEventListener('click', () => {
 saveCanvas('myCanvas', 'jpg');
+
+/*
+const screenshotTarget = document.body;
+html2canvas(screenshotTarget).then(canvas => {
+            	// to image as png use below line
+    const base64image = canvas.toDataURL("image/png");
+            	// show the image in window use below line
+    window.location.href = base64image;
+
+    document.body.appendChild(canvas);  
+    dataURL = canvas.toDataURL();  
+    print(dataURL);
+    pushScreenshotToServer(dataURL); 
+
+});  
+*/
 alert("saving image lol");
 })
+/*
+function pushScreenshotToServer(dataURL) {  
+            $.ajax({ 
+                url: "push-screenshot.php",  
+                type: "POST",  
+                data: {  
+                    image: dataURL  
+                },  
+                dataType: "html", 
+                success: function() {  
+                	console.log('Screenshot pushed to server.');
+                }  
+            });  
+        }  
+
+        */
 </script>
 </html>
