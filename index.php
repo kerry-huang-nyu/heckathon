@@ -3,21 +3,23 @@
 <html lang="en">
 <html>
     <head>
-        <title>Image Upload</title>
+        <title>HTC</title>
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="style.css">
     </head>
-<body>
-    <h1 class="title">Handwrite to Code</h1>
-    <div>
-        <a href="#" class="next" onclick="replace()">&#8250;</a>
+<body class="background">
+    <h1 class="title">Handwriting to Code</h1>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>      
+    <div id="align-left">
+        <form method="POST" action="upload.php" enctype="multipart/form-data">
+            <input type="file" name="myimage" class="file-button">
+            <input type="submit" name="submit_image" value="Upload" class="upload-button">
+        </form>
     </div>
-    <form method="POST" action="upload.php" enctype="multipart/form-data">
-        <input type="file" name="myimage" class="box">
-        <input type="submit" name="submit_image" value="Upload" class="box">
-    </form>
-    <div>
-        <button onclick="replace()" class="draw">Draw</button>
+    <div id="align-right">
+        <button onclick="replace()" class="draw-button">Draw</button>
     </div>
 </body>
 </html>

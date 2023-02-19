@@ -1,12 +1,143 @@
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background: #82c1cf;
+    animation-name: bg_color;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
 
+/*
+@keyframes bg_color{
+    0%{
+        background-color: #EBFFF9;
+    }
+
+    20%{
+        background-color: #C6E4F7;
+    }
+
+    40%{
+        background-color: #EDDBFF;
+    }
+
+
+    60%{
+        background-color: #B1A3C7;
+    }
+
+
+    80%{
+        background-color: #C6E4F7;
+    }
+
+
+    100%{
+        background-color: #EBFFF9;
+    }
+
+
+}
+*/
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #EDDBFF 50%, #C6E4F7 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+    
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+.bg3 {
+    animation-duration:5s;
+}
+
+@keyframes slide {
+    0% {
+    transform:translateX(-25%);        
+    }
+        
+    100% {
+    transform:translateX(25%);
+    }
+}
+
+.form,
 .title{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    font-size: 4em;
 }
 
 .box{
     display: inline-block;
     margin: 0 auto;
 }
+
+.background{
+    background-color: #E6E6FA;
+}
+
+#align-left{
+    display:block;
+    padding-left:300px;
+    float:left;
+}
+
+#align-right{
+    float:right;
+    padding-right:500px;
+}
+
+input[type=button] {
+    font-family: monospace;
+}
+
+.file-button{
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    font-size: 20px; 
+    width: 150px;
+    height: 80px;
+    width: 150%;
+    height: 120%;
+}
+
+.upload-button{
+    margin: 0;
+    margin-top:43px;
+    position: absolute;
+    top: 33.5%;
+    font-size: 45px;
+    width: 165px;
+    height: 85px;
+    border-radius:8px;
+}
+
+.upload-button:hover{
+    opacity: 0.8;
+}
+
+.draw-button{
+    margin: 0;
+    position: absolute;
+    top: 39.5%;
+    font-size: 45px;
+    width: 150px;
+    height: 80px;
+    border-radius:8px;
+}
+
+.draw-button:hover{
+    opacity: 0.8;
+}
+
