@@ -1,0 +1,12 @@
+
+.title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box{
+    display: inline-block;
+    margin: 0 auto;
+}
