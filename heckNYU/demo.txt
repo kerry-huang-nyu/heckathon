@@ -1,0 +1,7 @@
+public class Bruh {
+	public static void main (string[] args) {
+		for (int i = O; i < 10, i++ ){
+			System.out.println(i);
+		}
+	}
+}
