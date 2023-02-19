@@ -20,7 +20,10 @@
                     $fileNameNew = uniqid('', true).".".$fileActualExt;
                     $fileDestination = 'uploads/'.$fileNameNew;
                     move_uploaded_file($fileTmpName, $fileDestination);
-                    header("Location: index.php?uploadsuccess");
+                    $output = shell_exec('python3 /Users/ptato/heckathon/heckNYU/main.py '.$fileDestination);
+//                     $output = shell_exec('python3 /Users/ptato/heckathon/heckNYU/test.py');
+                    echo "This is the output:<br>".$output;
+                    // header("Location: index.php?uploadsuccess".$output);
                 }
                 else{
                     echo "Your file size is too big";
