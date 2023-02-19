@@ -4,7 +4,7 @@ const clear = document.getElementById('clear');
 const download = document.getElementById('download');
 const paths = [];
 let currentPath = [];
-
+ 
 function replace(){
     location.replace("fullcode.html");
 }
@@ -14,18 +14,19 @@ function replaceBack(){
 }
 
 function setup() {
-    createCanvas(window.innerWidth, window.innerHeight);
-    background(255);
+   //createCanvas(720, 400);
+   createCanvas(window.innerWidth, window.innerHeight);
+   background(240);
 }
-
+ 
 function draw() {
-    noFill();
-    if(mouseIsPressed){
-    const point = {
-    x: mouseX,
-    y: mouseY,
-    color: colorInput.value,
-    weight: weight.value
+noFill();
+if(mouseIsPressed){
+const point = {
+x: mouseX,
+y: mouseY,
+color: colorInput.value,
+weight: weight.value
 };
 currentPath.push(point);
 }
@@ -39,19 +40,19 @@ vertex(point.x, point.y);
 endShape();
 });
 }
-
+ 
 function mousePressed() {
 currentPath = [];
 paths.push(currentPath);
 }
-
+ 
 clear.addEventListener('click', () => {
 paths.splice(0);
-background(255);
+background(240);
 });
 
 download.addEventListener('click', () => {
 saveCanvas('myCanvas', 'jpg');
-print("saving image");
+
 alert("saving image lol");
 })
